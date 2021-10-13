@@ -89,7 +89,6 @@
 
         img {
             display: block;
-            height: auto;
         }
 
         .page-print & {
@@ -200,7 +199,7 @@
         }
     }
 
-    .page-header .panel.wrapper,
+    .page-header,
     .page-footer {
         .switcher {
             margin-right: 10px;
@@ -297,6 +296,10 @@
             box-sizing: border-box;
             width: 100%;
         }
+
+        .ie11 & {
+            height: 100%;
+        }
     }
 
     .navigation ul {
@@ -368,7 +371,7 @@
     }
 
     .logo {
-        margin: 0 auto 25px 0;
+        margin: -8px auto 25px 0;
 
         img {
             max-height: inherit;

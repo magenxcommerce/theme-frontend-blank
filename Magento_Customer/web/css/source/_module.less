@@ -11,7 +11,7 @@
 @account-nav-color: false;
 
 @account-nav-current-border: 3px solid transparent;
-@account-nav-current-border-color: @active__color;
+@account-nav-current-border-color: @color-orange-red1;
 @account-nav-current-color: false;
 @account-nav-current-font-weight: @font-weight__semibold;
 
@@ -65,7 +65,7 @@
     }
 
     .form-address-edit {
-        .region_id {
+        #region_id {
             display: none;
         }
 
@@ -85,7 +85,6 @@
     .box-information,
     .box-newsletter {
         .box-content {
-            .lib-wrap-words();
             line-height: 26px;
         }
     }
@@ -166,7 +165,7 @@
 
     //  Checkout address (create shipping address)
     .field.street {
-        .field {
+        .field.additional {
             .label {
                 &:extend(.abs-visually-hidden all);
             }
@@ -368,8 +367,8 @@
     }
 
     .account {
-        .messages {
-            margin-bottom: 0;
+        .page.messages {
+            margin-bottom: @indent__xl;
         }
 
         .toolbar {
@@ -389,17 +388,6 @@
             position: relative;
         }
     }
-
-    .form.search.advanced {
-        .field.price {
-            .with-addon {
-                .input-text {
-                    flex-basis: auto;
-                    width: 100%;
-                }
-            }
-        }
-    }
 }
 
 //
@@ -412,10 +400,8 @@
 
         .block {
             &:extend(.abs-blocks-2columns all);
-            .login {
+            &.login {
                 .actions-toolbar {
-                    margin-left: 0;
-
                     > .primary {
                         margin-bottom: 0;
                         margin-right: @indent__l;
@@ -430,17 +416,12 @@
 
         .fieldset {
             &:after {
-                margin-left: 0;
                 &:extend(.abs-margin-for-forms-desktop all);
             }
 
             > .field {
                 > .control {
-                    width: 80%;
-                }
-
-                .label {
-                    text-align: left;
+                    width: 55%;
                 }
             }
         }
@@ -470,9 +451,7 @@
     .form.password.reset,
     .form.send.confirmation,
     .form.password.forget,
-    .form.create.account,
-    .form.search.advanced,
-    .form.form-orders-search {
+    .form.create.account {
         min-width: 600px;
         width: 50%;
     }

@@ -457,11 +457,9 @@
         .action {
             &.delete {
                 &:extend(.abs-remove-button-for-blocks all);
-                line-height: unset;
                 position: absolute;
                 right: 0;
-                top: -1px;
-                width: auto;
+                top: 0;
             }
         }
 
@@ -490,7 +488,6 @@
 
         .product-items-names {
             .product-item {
-                display: flex;
                 margin-bottom: @indent__s;
             }
 
@@ -509,6 +506,17 @@
             min-height: inherit;
         }
     }
+
+    //
+    //  Category page 1 column layout
+    //  ---------------------------------------------
+
+    .catalog-category-view.page-layout-1column {
+        .column.main {
+            min-height: inherit;
+        }
+    }
+
 }
 
 //
@@ -544,7 +552,8 @@
 
     .compare,
     .product-addto-links .action.tocompare,
-    .product-item-actions .actions-secondary > .action.tocompare {
+    .product-item-actions .actions-secondary > .action.tocompare,
+    [class*='block-compare'] {
         display: none;
     }
 }
